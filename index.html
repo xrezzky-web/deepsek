@@ -183,19 +183,46 @@
         <!-- HOME PAGE -->
         <section id="page-home" class="page-view fade-in">
 
-            <!-- HERO BANNER (Dynamic from Firebase Config) -->
+            <!-- HERO BANNER -->
             <div class="relative rounded-[32px] overflow-hidden mb-6" style="min-height:260px;">
+                <!-- BG gradient layer -->
                 <div class="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0d1f3c] to-[#05080f]"></div>
+                <!-- Decorative blobs -->
                 <div class="absolute top-[-30%] right-[-10%] w-[55%] h-[200%] bg-blue-600/20 blur-[80px] rounded-full"></div>
                 <div class="absolute bottom-[-40%] left-[20%] w-[40%] h-[150%] bg-purple-600/15 blur-[80px] rounded-full"></div>
+                <!-- Grid pattern overlay -->
                 <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
 
                 <div class="relative z-10 px-8 py-10 md:px-14 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8">
                     <div class="flex-1">
-                        <div id="heroBadges" class="flex items-center gap-3 mb-4 flex-wrap"></div>
-                        <h1 id="heroTitle1" class="text-3xl md:text-5xl font-extrabold font-syne leading-tight mb-1">XREZZKY</h1>
-                        <h2 id="heroTitle2" class="text-xl md:text-3xl font-extrabold font-syne text-blue-400 mb-4">OFFICIAL STORE</h2>
-                        <p id="heroTagline" class="text-gray-300 text-sm md:text-base mb-6 max-w-md leading-relaxed"></p>
+                        <!-- TRUST BADGES -->
+                        <div class="flex items-center gap-3 mb-4 flex-wrap">
+                            <span class="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-blue-300 bg-blue-500/15 border border-blue-500/30 px-3 py-1.5 rounded-full">
+                                <i class="fas fa-shield-alt text-blue-400"></i> TERJAMIN
+                            </span>
+                            <span class="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-green-300 bg-green-500/15 border border-green-500/30 px-3 py-1.5 rounded-full">
+                                <i class="fas fa-check-circle text-green-400"></i> TRUSTED
+                            </span>
+                            <span class="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-yellow-300 bg-yellow-500/15 border border-yellow-500/30 px-3 py-1.5 rounded-full">
+                                <i class="fas fa-star text-yellow-400"></i> #1 MARKETPLACE
+                            </span>
+                        </div>
+
+                        <!-- STORE NAME -->
+                        <h1 class="text-3xl md:text-5xl font-extrabold font-syne leading-tight mb-1">
+                            XREZZKY
+                        </h1>
+                        <h2 class="text-xl md:text-3xl font-extrabold font-syne text-blue-400 mb-4">
+                            OFFICIAL STORE
+                        </h2>
+
+                        <!-- TAGLINE -->
+                        <p class="text-gray-300 text-sm md:text-base mb-6 max-w-md leading-relaxed">
+                            Platform jual-beli produk digital paling aman & terpercaya.<br>
+                            <span class="text-blue-300 font-semibold">Transaksi dijamin aman</span> · <span class="text-green-300 font-semibold">Respon cepat 24/7</span> · <span class="text-yellow-300 font-semibold">100% anti-tipu</span>
+                        </p>
+
+                        <!-- CTA BUTTONS -->
                         <div class="flex gap-3 flex-wrap">
                             <button onclick="document.getElementById('mainProductGrid').scrollIntoView({behavior:'smooth'})"
                                 class="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-xl font-bold text-sm transition shadow-lg shadow-blue-900/40">
@@ -207,25 +234,92 @@
                             </button>
                         </div>
                     </div>
-                    <div id="heroStats" class="flex flex-row md:flex-col gap-3 shrink-0"></div>
+
+                    <!-- RIGHT: STATS -->
+                    <div class="flex flex-row md:flex-col gap-3 shrink-0">
+                        <div class="bg-white/5 border border-white/10 backdrop-blur px-5 py-4 rounded-2xl text-center min-w-[100px]">
+                            <p class="text-2xl font-extrabold text-blue-400">500+</p>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Produk</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 backdrop-blur px-5 py-4 rounded-2xl text-center min-w-[100px]">
+                            <p class="text-2xl font-extrabold text-green-400">2K+</p>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Pembeli</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 backdrop-blur px-5 py-4 rounded-2xl text-center min-w-[100px]">
+                            <p class="text-2xl font-extrabold text-yellow-400">4.9★</p>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Rating</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- PROMO TICKER -->
-            <div id="promoTickerWrap" class="relative overflow-hidden rounded-2xl mb-6 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-600/20 border border-white/10 py-3 px-4">
+            <div class="relative overflow-hidden rounded-2xl mb-6 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-600/20 border border-white/10 py-3 px-4">
                 <div class="flex items-center gap-3">
                     <span class="shrink-0 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg">🔥 PROMO</span>
                     <div class="overflow-hidden flex-1">
-                        <div id="promoTickerInner" class="promo-ticker flex gap-10 whitespace-nowrap"></div>
+                        <div class="promo-ticker flex gap-10 whitespace-nowrap animate-[ticker_18s_linear_infinite]">
+                            <span class="text-sm font-semibold text-gray-200">✨ Flash Sale skin Mobile Legends hingga 50% OFF setiap Jumat</span>
+                            <span class="text-sm font-semibold text-gray-200">🎮 Gratis ongkir untuk pembelian pertama kamu</span>
+                            <span class="text-sm font-semibold text-gray-200">🔐 Semua transaksi dijamin aman & bergaransi</span>
+                            <span class="text-sm font-semibold text-gray-200">💎 Member Premium dapat akses early bird produk baru</span>
+                            <span class="text-sm font-semibold text-gray-200">✨ Flash Sale skin Mobile Legends hingga 50% OFF setiap Jumat</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- FITUR UNGGULAN -->
-            <div id="featuresGrid" class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8"></div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+                <div class="glass-card p-4 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center shrink-0">
+                        <i class="fas fa-shield-alt text-blue-400"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-extrabold">Transaksi Aman</p>
+                        <p class="text-[10px] text-gray-500">Sistem escrow & garansi</p>
+                    </div>
+                </div>
+                <div class="glass-card p-4 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center shrink-0">
+                        <i class="fas fa-bolt text-green-400"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-extrabold">Proses Cepat</p>
+                        <p class="text-[10px] text-gray-500">Pengiriman instan</p>
+                    </div>
+                </div>
+                <div class="glass-card p-4 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center shrink-0">
+                        <i class="fas fa-headset text-purple-400"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-extrabold">CS 24/7</p>
+                        <p class="text-[10px] text-gray-500">Siap bantu kapanpun</p>
+                    </div>
+                </div>
+                <div class="glass-card p-4 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-yellow-500/20 rounded-xl flex items-center justify-center shrink-0">
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-extrabold">Produk Premium</p>
+                        <p class="text-[10px] text-gray-500">Kualitas terjamin</p>
+                    </div>
+                </div>
+            </div>
 
-            <!-- SELLER CTA BANNER -->
-            <div id="homeSellerCta" class="relative rounded-[28px] overflow-hidden mb-8 border border-blue-500/30 cursor-pointer hover:border-blue-400/60 transition group" onclick="navigate('profile')">
+            <!-- TOKO CHIPS -->
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-extrabold font-syne text-lg flex items-center gap-2"><i class="fas fa-store text-blue-400"></i> Semua Toko</h3>
+                    <button onclick="openModal('modalAllStores')" class="text-blue-400 text-xs font-bold hover:underline flex items-center gap-1">Lihat Semua <i class="fas fa-arrow-right ml-1"></i></button>
+                </div>
+                <div id="storeChips" class="flex gap-3 overflow-x-auto no-scrollbar pb-2"></div>
+            </div>
+
+            <!-- SELLER CTA BANNER (hidden untuk seller/admin) -->
+            <div id="homeSellerCta" class="hidden relative rounded-[28px] overflow-hidden mb-8 border border-blue-500/30 cursor-pointer hover:border-blue-400/60 transition group" onclick="openModal('modalBecomeSeller')">
                 <div class="absolute inset-0 bg-gradient-to-r from-[#0d1f3c] to-[#0a1020]"></div>
                 <div class="absolute right-0 top-0 h-full w-1/3 bg-blue-600/10 blur-2xl"></div>
                 <div class="relative z-10 flex items-center justify-between p-6 md:p-8 gap-4">
@@ -248,10 +342,15 @@
             <!-- CATEGORY FILTER -->
             <div class="flex gap-4 overflow-x-auto pb-6 no-scrollbar" id="categoryFilter">
                 <div class="flex-none px-6 py-3 glass-card text-sm font-bold border-blue-500 bg-blue-500/10 cursor-pointer category-btn active-cat" data-cat="all">Semua</div>
+                <div class="flex-none px-6 py-3 glass-card text-sm font-bold hover:border-blue-500 cursor-pointer category-btn" data-cat="Game Mobile">Game Mobile</div>
+                <div class="flex-none px-6 py-3 glass-card text-sm font-bold hover:border-blue-500 cursor-pointer category-btn" data-cat="Premium Apps">Premium Apps</div>
+                <div class="flex-none px-6 py-3 glass-card text-sm font-bold hover:border-blue-500 cursor-pointer category-btn" data-cat="E-Voucher">E-Voucher</div>
+                <div class="flex-none px-6 py-3 glass-card text-sm font-bold hover:border-blue-500 cursor-pointer category-btn" data-cat="Akun Sosmed">Akun Sosmed</div>
             </div>
 
             <!-- PRODUCT GRID -->
             <div id="mainProductGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mt-4">
+                <!-- Skeleton loaders -->
                 <div class="animate-pulse glass-card h-64 rounded-3xl"></div>
                 <div class="animate-pulse glass-card h-64 rounded-3xl"></div>
                 <div class="animate-pulse glass-card h-64 rounded-3xl"></div>
@@ -268,7 +367,7 @@
                     <div class="glass-card p-12 text-center text-gray-500">
                         <i class="fas fa-shopping-bag text-4xl mb-4 opacity-30"></i>
                         <p class="font-bold">Belum ada pesanan</p>
-                        <p class="text-sm mt-1">Pesanan kamu akan muncul di sini setelah bertransaksi</p>
+                        <p class="text-sm mt-1">Pesanan kamu akan muncul di sini setelah bertransaksi via WhatsApp</p>
                         <button onclick="navigate('home')" class="btn-primary mt-4 !inline-block">Mulai Belanja</button>
                     </div>
                 </div>
@@ -311,6 +410,7 @@
 
                 <!-- LOGGED IN STATE -->
                 <div id="profileLoggedIn" class="hidden">
+                    <!-- USER CARD -->
                     <div class="glass-card p-8 mb-5">
                         <div class="flex flex-col items-center">
                             <div class="relative group mb-4">
@@ -322,10 +422,9 @@
                                 </label>
                                 <input type="file" id="avatarUpload" class="hidden" accept="image/*">
                             </div>
-                            <h2 id="userNameText" class="text-2xl font-bold">Memuat...</h2>
-                            <p id="userEmailText" class="text-gray-400 text-sm mb-6"></p>
-                            <div id="roleBadgeContainer" class="mb-6"></div>
-                            <div id="sellerBanner" class="space-y-3 mb-6"></div>
+                            <h2 id="userNameText" class="text-2xl font-bold">-</h2>
+                            <p id="userEmailText" class="text-gray-400 text-sm mb-3">-</p>
+                            <div id="roleBadgeContainer" class="mb-5"></div>
                             <div class="grid grid-cols-2 gap-4 w-full">
                                 <div class="bg-white/5 p-4 rounded-2xl text-center">
                                     <p class="text-xs text-gray-400 mb-1">Total Transaksi</p>
@@ -338,7 +437,10 @@
                             </div>
                         </div>
                     </div>
+                    <!-- DYNAMIC ROLE BANNER (diisi JS) -->
+                    <div id="sellerBanner" class="mb-5"></div>
 
+                    <!-- SELLER CTA CARD -->
                     <div id="sellerCtaCard" class="relative rounded-[24px] overflow-hidden mb-5 border border-blue-500/30 cursor-pointer hover:border-blue-400 transition group" onclick="openModal('modalBecomeSeller')">
                         <div class="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-purple-900/40"></div>
                         <div class="absolute right-4 top-1/2 -translate-y-1/2 text-[80px] opacity-10 font-black font-syne">SELLER</div>
@@ -355,6 +457,7 @@
                         </div>
                     </div>
 
+                    <!-- MENU LIST -->
                     <div class="space-y-3 mb-5">
                         <button onclick="openEditProfile()" class="w-full flex items-center justify-between p-5 glass-card hover:bg-white/5 transition rounded-2xl">
                             <div class="flex items-center gap-4">
@@ -365,6 +468,7 @@
                             </div>
                             <i class="fas fa-chevron-right text-gray-600"></i>
                         </button>
+
                         <button onclick="showTransactionHistory()" class="w-full flex items-center justify-between p-5 glass-card hover:bg-white/5 transition rounded-2xl">
                             <div class="flex items-center gap-4">
                                 <div class="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center">
@@ -374,6 +478,7 @@
                             </div>
                             <i class="fas fa-chevron-right text-gray-600"></i>
                         </button>
+
                         <button onclick="openModal('modalAbout')" class="w-full flex items-center justify-between p-5 glass-card hover:bg-white/5 transition rounded-2xl">
                             <div class="flex items-center gap-4">
                                 <div class="w-10 h-10 bg-cyan-500/20 rounded-xl flex items-center justify-center">
@@ -383,6 +488,7 @@
                             </div>
                             <i class="fas fa-chevron-right text-gray-600"></i>
                         </button>
+
                         <button onclick="openModal('modalPolicy')" class="w-full flex items-center justify-between p-5 glass-card hover:bg-white/5 transition rounded-2xl">
                             <div class="flex items-center gap-4">
                                 <div class="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center">
@@ -392,6 +498,7 @@
                             </div>
                             <i class="fas fa-chevron-right text-gray-600"></i>
                         </button>
+
                         <button onclick="logoutUser()" class="w-full flex items-center justify-between p-5 glass-card border-red-500/20 hover:bg-red-500/10 transition rounded-2xl">
                             <div class="flex items-center gap-4">
                                 <div class="w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
@@ -401,10 +508,13 @@
                             </div>
                         </button>
                     </div>
+
+                    <!-- APP VERSION -->
                     <p class="text-center text-[10px] text-gray-600 pb-2">XREZZKY STORE v1.0.0 · Made with ❤️</p>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- BOTTOM NAV -->
@@ -444,7 +554,7 @@
                     <p id="detPrice" class="text-2xl font-bold text-blue-400 mb-2">Rp 0</p>
                     <p class="text-sm text-gray-500 mb-6">Stok: <span id="detStock" class="text-green-400 font-bold">-</span></p>
                     
-                    <div onclick="openStoreFromDetail()" class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 mb-6 cursor-pointer hover:bg-white/10 transition">
+                    <div onclick="openSellerProfile()" class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 mb-6 cursor-pointer hover:bg-white/10 transition">
                         <div id="detSellerAvatar" class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center font-bold text-lg">S</div>
                         <div>
                             <p class="text-xs text-gray-400">Penjual Terverifikasi</p>
@@ -479,6 +589,8 @@
             <button onclick="closeModal('modalAuth')" class="absolute top-4 right-4 w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition">
                 <i class="fas fa-times"></i>
             </button>
+
+            <!-- LOGIN FORM -->
             <div id="loginForm">
                 <h2 class="text-3xl font-extrabold mb-2 font-syne">Selamat Datang</h2>
                 <p class="text-gray-400 text-sm mb-8">Masuk ke akun XREZZKY STORE Anda</p>
@@ -494,6 +606,8 @@
                     Belum punya akun? <span onclick="toggleAuthForm()" class="text-blue-400 font-bold cursor-pointer hover:underline">Daftar</span>
                 </p>
             </div>
+            
+            <!-- REGISTER FORM -->
             <div id="regForm" class="hidden">
                 <h2 class="text-3xl font-extrabold mb-2 font-syne">Buat Akun</h2>
                 <p class="text-gray-400 text-sm mb-8">Daftar untuk mulai belanja produk premium</p>
@@ -525,7 +639,7 @@
                 <label class="text-xs text-gray-400 mb-2 block">Nama Tampilan</label>
                 <input type="text" id="editName" class="custom-input" placeholder="Nama Lengkap">
             </div>
-                        <p class="text-xs text-gray-500 mb-6 -mt-3">Email tidak dapat diubah.</p>
+            <p class="text-xs text-gray-500 mb-6 -mt-3">Email tidak dapat diubah.</p>
             <button onclick="saveEditProfile()" class="btn-primary w-full">Simpan Perubahan</button>
         </div>
     </div>
@@ -537,10 +651,12 @@
                 <button onclick="closeModal('modalSeller')" class="absolute top-4 right-4 w-10 h-10 bg-black/20 rounded-full flex items-center justify-center border border-white/10 hover:bg-white/10 transition">
                     <i class="fas fa-times"></i>
                 </button>
+                
                 <div class="flex flex-col items-center">
                     <div id="sBigAvatar" class="w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold bg-blue-600 border-4 border-blue-500/30 shadow-2xl mb-4 text-white">S</div>
                     <h2 id="sBigName" class="text-2xl font-extrabold font-syne mb-1 text-white">Nama Toko</h2>
                     <p class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mb-6">Verified Seller</p>
+                    
                     <div class="grid grid-cols-3 gap-3 w-full">
                         <div class="bg-white/5 backdrop-blur-md p-3 rounded-2xl border border-white/5 text-center">
                             <p class="text-[9px] text-gray-400 uppercase font-bold mb-1">Total Item</p>
@@ -557,12 +673,14 @@
                     </div>
                 </div>
             </div>
+
             <div class="p-6">
                 <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 flex items-center gap-2">
                     <i class="fas fa-th-large text-blue-500"></i> Koleksi Produk
                 </h4>
                 <div id="sellerProductList" class="grid grid-cols-2 gap-3 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar"></div>
             </div>
+
             <div class="p-6 border-t border-white/5 bg-black/20">
                 <button onclick="closeModal('modalSeller')" class="btn-primary w-full !rounded-xl !py-3">Tutup Profil</button>
             </div>
@@ -607,7 +725,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="px-8 pb-8 overflow-y-auto max-h-[65vh] custom-scrollbar space-y-6">
+
+                <!-- TENTANG -->
                 <div>
                     <h3 class="text-xs font-black uppercase tracking-widest text-blue-400 mb-3 flex items-center gap-2">
                         <i class="fas fa-store"></i> Tentang Kami
@@ -616,6 +737,8 @@
                         XREZZKY OFFICIAL STORE adalah platform marketplace digital yang hadir untuk menghubungkan penjual dan pembeli produk digital secara aman, cepat, dan terpercaya. Kami berkomitmen menghadirkan pengalaman belanja digital yang menyenangkan dan bebas risiko untuk semua kalangan.
                     </p>
                 </div>
+
+                <!-- VISI -->
                 <div class="bg-blue-500/10 border border-blue-500/20 rounded-2xl p-5">
                     <h3 class="text-xs font-black uppercase tracking-widest text-blue-300 mb-3 flex items-center gap-2">
                         <i class="fas fa-eye"></i> Visi
@@ -624,6 +747,8 @@
                         "Menjadi marketplace digital paling aman, terpercaya, dan inovatif di Indonesia — tempat di mana setiap transaksi digital terasa mudah, cepat, dan menyenangkan bagi semua pihak."
                     </p>
                 </div>
+
+                <!-- MISI -->
                 <div>
                     <h3 class="text-xs font-black uppercase tracking-widest text-purple-400 mb-3 flex items-center gap-2">
                         <i class="fas fa-bullseye"></i> Misi
@@ -661,6 +786,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- NILAI -->
                 <div>
                     <h3 class="text-xs font-black uppercase tracking-widest text-green-400 mb-3 flex items-center gap-2">
                         <i class="fas fa-gem"></i> Nilai Kami
@@ -692,6 +819,7 @@
                         </div>
                     </div>
                 </div>
+
                 <button onclick="closeModal('modalAbout')" class="btn-primary w-full !rounded-xl">Tutup</button>
             </div>
         </div>
@@ -714,7 +842,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="px-8 pb-8 overflow-y-auto max-h-[65vh] custom-scrollbar space-y-6">
+
+                <!-- KETENTUAN UMUM -->
                 <div>
                     <h3 class="text-xs font-black uppercase tracking-widest text-orange-400 mb-3 flex items-center gap-2">
                         <i class="fas fa-scroll"></i> Ketentuan Umum
@@ -723,6 +854,8 @@
                         Dengan menggunakan layanan XREZZKY OFFICIAL STORE, kamu dianggap telah membaca, memahami, dan menyetujui seluruh ketentuan yang berlaku. Pastikan kamu berusia minimal 13 tahun atau mendapat izin dari orang tua/wali.
                     </p>
                 </div>
+
+                <!-- KEBIJAKAN PEMBELI -->
                 <div class="bg-blue-500/5 border border-blue-500/15 rounded-2xl p-5">
                     <h3 class="text-xs font-black uppercase tracking-widest text-blue-300 mb-3 flex items-center gap-2">
                         <i class="fas fa-user"></i> Kebijakan Pembeli
@@ -735,6 +868,8 @@
                         <li class="flex items-start gap-2"><i class="fas fa-check text-blue-400 mt-1 shrink-0"></i> Refund hanya berlaku jika produk terbukti cacat atau tidak sesuai deskripsi.</li>
                     </ul>
                 </div>
+
+                <!-- KEBIJAKAN SELLER -->
                 <div class="bg-green-500/5 border border-green-500/15 rounded-2xl p-5">
                     <h3 class="text-xs font-black uppercase tracking-widest text-green-300 mb-3 flex items-center gap-2">
                         <i class="fas fa-store"></i> Kebijakan Seller
@@ -748,6 +883,8 @@
                         <li class="flex items-start gap-2"><i class="fas fa-check text-green-400 mt-1 shrink-0"></i> Komisi platform sebesar yang telah disepakati saat pendaftaran seller.</li>
                     </ul>
                 </div>
+
+                <!-- PRIVASI -->
                 <div class="bg-purple-500/5 border border-purple-500/15 rounded-2xl p-5">
                     <h3 class="text-xs font-black uppercase tracking-widest text-purple-300 mb-3 flex items-center gap-2">
                         <i class="fas fa-lock"></i> Kebijakan Privasi
@@ -759,6 +896,8 @@
                         <li class="flex items-start gap-2"><i class="fas fa-check text-purple-400 mt-1 shrink-0"></i> Pengguna dapat meminta penghapusan akun dan data kapan saja.</li>
                     </ul>
                 </div>
+
+                <!-- LARANGAN -->
                 <div class="bg-red-500/5 border border-red-500/15 rounded-2xl p-5">
                     <h3 class="text-xs font-black uppercase tracking-widest text-red-300 mb-3 flex items-center gap-2">
                         <i class="fas fa-ban"></i> Hal yang Dilarang
@@ -770,6 +909,7 @@
                         <li class="flex items-start gap-2"><i class="fas fa-times text-red-400 mt-1 shrink-0"></i> Akun ganda untuk tujuan manipulasi sistem atau review.</li>
                     </ul>
                 </div>
+
                 <p class="text-center text-[10px] text-gray-600">Terakhir diperbarui: Maret 2025 · XREZZKY OFFICIAL STORE</p>
                 <button onclick="closeModal('modalPolicy')" class="btn-primary w-full !rounded-xl">Saya Mengerti</button>
             </div>
@@ -961,282 +1101,125 @@
 
         </div>
     </div>
-
-    <!-- MODAL RATING -->
-    <div id="modalRating" class="modal-overlay">
-        <div class="modal-content !max-w-md p-8">
-                        <button onclick="closeModal('modalRating')" class="absolute top-4 right-4 w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition">
-                <i class="fas fa-times"></i>
-            </button>
-            <h2 class="text-2xl font-extrabold font-syne mb-2">⭐ Beri Rating</h2>
-            <p class="text-gray-400 text-sm mb-6">Bagaimana pengalaman kamu dengan produk <span id="ratingProdName" class="text-blue-400 font-bold">-</span>?</p>
-            
-            <div class="flex justify-center gap-3 mb-6" id="starInputGroup">
-                <label class="cursor-pointer">
-                    <input type="radio" name="rating" value="1" class="hidden peer">
-                    <i class="fas fa-star text-4xl text-gray-600 peer-checked:text-yellow-400 transition-colors hover:text-yellow-500"></i>
-                </label>
-                <label class="cursor-pointer">
-                    <input type="radio" name="rating" value="2" class="hidden peer">
-                    <i class="fas fa-star text-4xl text-gray-600 peer-checked:text-yellow-400 transition-colors hover:text-yellow-500"></i>
-                </label>
-                <label class="cursor-pointer">
-                    <input type="radio" name="rating" value="3" class="hidden peer">
-                    <i class="fas fa-star text-4xl text-gray-600 peer-checked:text-yellow-400 transition-colors hover:text-yellow-500"></i>
-                </label>
-                <label class="cursor-pointer">
-                    <input type="radio" name="rating" value="4" class="hidden peer">
-                    <i class="fas fa-star text-4xl text-gray-600 peer-checked:text-yellow-400 transition-colors hover:text-yellow-500"></i>
-                </label>
-                <label class="cursor-pointer">
-                    <input type="radio" name="rating" value="5" class="hidden peer">
-                    <i class="fas fa-star text-4xl text-gray-600 peer-checked:text-yellow-400 transition-colors hover:text-yellow-500"></i>
-                </label>
-            </div>
-            
-            <div class="input-group">
-                <textarea id="ratingComment" class="custom-input" rows="3" placeholder="Tulis ulasanmu di sini... (opsional)"></textarea>
-            </div>
-            
-            <button onclick="submitRating()" class="btn-primary w-full">Kirim Rating</button>
-        </div>
-    </div>
-
-    <!-- MODAL STORE PAGE -->
+    <!-- MODAL: STORE PAGE -->
     <div id="modalStorePage" class="modal-overlay">
         <div class="modal-content !max-w-3xl p-0 overflow-hidden">
-            <div class="relative p-6 bg-gradient-to-b from-blue-600/20 to-transparent">
-                <button onclick="closeModal('modalStorePage')" class="absolute top-4 right-4 w-10 h-10 bg-black/20 rounded-full flex items-center justify-center border border-white/10 hover:bg-white/10 transition">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div class="flex items-center gap-4">
-                    <div id="spAvatar" class="w-16 h-16 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-2xl font-bold shadow-xl">S</div>
-                    <div class="flex-1">
-                        <h2 id="spStoreName" class="text-xl font-extrabold font-syne">Nama Toko</h2>
-                        <p id="spOwnerName" class="text-xs text-gray-400">oleh -</p>
-                        <div class="flex items-center gap-3 mt-1">
-                            <span id="spCity" class="text-[10px] text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i>-</span>
-                            <span class="text-[9px] bg-green-500/20 text-green-400 border border-green-500/30 px-2 py-0.5 rounded-full font-bold">✅ Verified</span>
+            <div class="relative p-7 bg-gradient-to-b from-blue-600/20 to-transparent">
+                <button onclick="closeModal('modalStorePage')" class="absolute top-4 right-4 w-10 h-10 bg-black/20 rounded-full flex items-center justify-center border border-white/10 hover:bg-white/10 transition"><i class="fas fa-times"></i></button>
+                <div class="flex flex-col items-center">
+                    <div id="spAvatar" class="w-20 h-20 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-3xl font-bold border-4 border-blue-500/30 shadow-2xl mb-4">S</div>
+                    <h2 id="spStoreName" class="text-2xl font-extrabold font-syne mb-0.5 text-center">-</h2>
+                    <p id="spOwnerName" class="text-gray-400 text-xs mb-1">oleh -</p>
+                    <span class="text-[10px] text-blue-400 font-black uppercase tracking-[0.2em] mb-2">✅ Verified Seller</span>
+                    <p id="spCity" class="text-gray-500 text-xs mb-3"></p>
+                    <div id="spOverallRating" class="flex items-center gap-2 mb-4 bg-white/5 px-4 py-2 rounded-full"></div>
+                    <p id="spDesc" class="text-gray-400 text-sm text-center max-w-md mb-5 leading-relaxed">-</p>
+                    <div class="grid grid-cols-3 gap-3 w-full max-w-sm">
+                        <div class="bg-white/5 p-3 rounded-2xl border border-white/5 text-center"><p class="text-[9px] text-gray-400 uppercase font-bold mb-1">Produk</p><p id="spTotalItem" class="text-sm font-bold">0</p></div>
+                        <div class="bg-white/5 p-3 rounded-2xl border border-white/5 text-center"><p class="text-[9px] text-gray-400 uppercase font-bold mb-1">Stok</p><p id="spTotalStock" class="text-sm font-bold text-green-400">0</p></div>
+                        <div class="bg-white/5 p-3 rounded-2xl border border-white/5 text-center"><p class="text-[9px] text-gray-400 uppercase font-bold mb-1">Terjual</p><p id="spTotalSold" class="text-sm font-bold text-orange-400">0</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-6 pb-5">
+                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 flex items-center gap-2"><i class="fas fa-th-large text-blue-500"></i> Semua Produk Toko</h4>
+                <div id="spProductList" class="grid grid-cols-2 md:grid-cols-3 gap-3 max-h-[400px] overflow-y-auto pr-1 custom-scrollbar"></div>
+            </div>
+            <div class="px-6 pb-6 border-t border-white/5 pt-4"><button onclick="closeModal('modalStorePage')" class="btn-primary w-full !rounded-xl !py-3">Tutup</button></div>
+        </div>
+    </div>
+
+    <!-- MODAL: ALL STORES -->
+    <div id="modalAllStores" class="modal-overlay">
+        <div class="modal-content !max-w-3xl p-0 overflow-hidden">
+            <div class="p-6 border-b border-white/5">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-extrabold font-syne flex items-center gap-2"><i class="fas fa-store text-blue-400"></i> Semua Toko</h2>
+                    <button onclick="closeModal('modalAllStores')" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="relative"><i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i><input id="storeSearchInput" type="text" placeholder="Cari toko atau kategori..." class="custom-input !pl-11 !py-3 !rounded-2xl" oninput="filterStores(this.value)"></div>
+            </div>
+            <div id="allStoreGrid" class="p-5 grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[65vh] overflow-y-auto custom-scrollbar"></div>
+        </div>
+    </div>
+
+    <!-- MODAL: RATING -->
+    <div id="modalRating" class="modal-overlay">
+        <div class="modal-content !max-w-sm p-8">
+            <button onclick="closeModal('modalRating')" class="absolute top-4 right-4 w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition"><i class="fas fa-times"></i></button>
+            <h2 class="text-xl font-extrabold font-syne mb-1">Beri Rating</h2>
+            <p id="ratingProdName" class="text-gray-400 text-sm mb-5 line-clamp-1">Produk</p>
+            <style>.star-input{display:flex;flex-direction:row-reverse;gap:6px;justify-content:flex-start;margin-bottom:16px}.star-input input{display:none}.star-input label{font-size:32px;color:#374151;cursor:pointer;transition:.15s;line-height:1}.star-input label:hover,.star-input label:hover~label,.star-input input:checked~label{color:#f59e0b}</style>
+            <div class="star-input" id="starInputGroup">
+                <input type="radio" id="star5" name="rating_stars" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating_stars" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating_stars" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating_stars" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating_stars" value="1"><label for="star1">★</label>
+            </div>
+            <textarea id="ratingComment" class="custom-input mb-5" style="height:90px;resize:none" placeholder="Tulis ulasan kamu (opsional)..."></textarea>
+            <button onclick="submitRating()" class="btn-primary w-full">Kirim Rating ⭐</button>
+        </div>
+    </div>
+
+    <!-- MODAL: EDIT PROFILE -->
+    <div id="modalEditProfile" class="modal-overlay">
+        <div class="modal-content !max-w-md p-8">
+            <button onclick="closeModal('modalEditProfile')" class="absolute top-4 right-4 w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition"><i class="fas fa-times"></i></button>
+            <h2 class="text-2xl font-extrabold font-syne mb-6">Edit Profil</h2>
+            <div class="mb-4"><label class="text-xs text-gray-400 font-bold uppercase mb-1.5 block">Nama Tampilan</label><input type="text" id="editName" class="custom-input" placeholder="Nama kamu"></div>
+            <div class="mb-6"><label class="text-xs text-gray-400 font-bold uppercase mb-1.5 block">Nomor WhatsApp</label><div class="relative"><span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm font-bold">+62</span><input type="tel" id="editWa" class="custom-input !pl-12" placeholder="8123456789"></div><p class="text-[10px] text-gray-600 mt-1">Nomor WA kamu yang akan dikirim ke seller saat beli produk.</p></div>
+            <button onclick="saveEditProfile()" class="btn-primary w-full">Simpan Perubahan</button>
+        </div>
+    </div>
+
+    <!-- MODAL: PRODUCT DETAIL -->
+    <div id="modalDetail" class="modal-overlay">
+        <div class="modal-content !max-w-4xl p-0 overflow-hidden">
+            <div class="flex flex-col md:flex-row h-full">
+                <div class="w-full md:w-1/2 bg-black flex items-center justify-center p-4 relative min-h-[280px]">
+                    <button onclick="closeModal('modalDetail')" class="absolute top-4 left-4 w-10 h-10 bg-black/50 backdrop-blur-xl rounded-full flex items-center justify-center z-10 hover:bg-white/10 transition"><i class="fas fa-arrow-left"></i></button>
+                    <img id="detImg" src="" onclick="expandImg(this.src)" class="max-h-[400px] w-full object-contain shadow-2xl cursor-zoom-in hover:scale-[1.02] transition-transform duration-300">
+                </div>
+                <div class="w-full md:w-1/2 p-8 overflow-y-auto">
+                    <div class="flex justify-between items-start mb-4">
+                        <span id="detCat" class="text-xs font-bold text-blue-500 uppercase tracking-widest bg-blue-500/10 px-2 py-1 rounded-lg">KATEGORI</span>
+                        <div id="detRatingDisplay" class="flex items-center gap-1 text-sm"></div>
+                    </div>
+                    <h2 id="detTitle" class="text-3xl font-extrabold mb-2 leading-tight">-</h2>
+                    <p id="detPrice" class="text-2xl font-bold text-blue-400 mb-2">Rp 0</p>
+                    <p class="text-sm text-gray-500 mb-6">Stok: <span id="detStock" class="text-green-400 font-bold">-</span></p>
+                    <div onclick="openStoreFromDetail()" class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 mb-6 cursor-pointer hover:bg-white/10 transition">
+                        <div id="detSellerAvatar" class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center font-bold text-lg shrink-0">S</div>
+                        <div class="flex-1 min-w-0"><p class="text-xs text-gray-400">Penjual Terverifikasi ✅</p><p id="detSellerName" class="font-bold line-clamp-1">-</p><p id="detStoreName" class="text-xs text-blue-400 font-semibold line-clamp-1"></p></div>
+                        <div class="flex items-center gap-1 text-blue-400 text-xs font-bold shrink-0">Lihat Toko <i class="fas fa-chevron-right ml-1"></i></div>
+                    </div>
+                    <div class="space-y-3 mb-6"><h4 class="font-bold border-l-4 border-blue-500 pl-3">Deskripsi Produk</h4><p id="detDesc" class="text-gray-400 text-sm leading-relaxed">-</p></div>
+                    <div id="detReviews" class="mb-5"></div>
+                    <div id="qtySection" class="mb-5 p-4 glass-card rounded-2xl">
+                        <div class="flex items-center justify-between mb-2"><p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Jumlah Beli</p><p class="text-xs text-gray-500">Maks: <span id="detMaxBuy" class="text-yellow-400 font-bold">-</span></p></div>
+                        <div class="flex items-center gap-3">
+                            <button onclick="changeQty(-1)" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center font-bold transition text-lg">−</button>
+                            <input id="buyQty" type="number" value="1" min="1" class="custom-input !py-2 !px-3 text-center font-bold text-base" style="width:80px" oninput="clampQty()">
+                            <button onclick="changeQty(1)" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center font-bold transition text-lg">+</button>
+                            <div class="ml-auto text-right"><p class="text-[10px] text-gray-500">Total</p><p id="totalPrice" class="font-extrabold text-blue-400">Rp 0</p></div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="p-6">
-                <div class="mb-6">
-                    <p id="spDesc" class="text-gray-400 text-sm leading-relaxed">Deskripsi toko tidak tersedia.</p>
-                </div>
-                
-                <div class="grid grid-cols-3 gap-3 mb-6 text-center">
-                    <div class="bg-white/5 rounded-xl p-3">
-                        <p class="text-lg font-bold text-white" id="spTotalItem">0</p>
-                        <p class="text-[10px] text-gray-500">Produk</p>
-                    </div>
-                    <div class="bg-white/5 rounded-xl p-3">
-                        <p class="text-lg font-bold text-green-400" id="spTotalStock">0</p>
-                        <p class="text-[10px] text-gray-500">Stok</p>
-                    </div>
-                    <div class="bg-white/5 rounded-xl p-3">
-                        <p class="text-lg font-bold text-orange-400" id="spTotalSold">0</p>
-                        <p class="text-[10px] text-gray-500">Terjual</p>
+                    <div class="flex gap-4">
+                        <button onclick="copyLink()" class="flex-none w-14 h-14 glass-card flex items-center justify-center hover:bg-white/10 transition" title="Salin Link"><i class="fas fa-share-alt"></i></button>
+                        <button id="btnBuy" onclick="handleBuyNow()" class="flex-1 btn-primary !rounded-2xl flex items-center justify-center gap-3"><i class="fas fa-shopping-cart"></i> Beli Sekarang</button>
                     </div>
                 </div>
-                
-                <div id="spOverallRating" class="mb-4 text-center"></div>
-                
-                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <i class="fas fa-box text-blue-500"></i> Semua Produk
-                </h4>
-                <div id="spProductList" class="grid grid-cols-2 gap-3 max-h-[400px] overflow-y-auto custom-scrollbar"></div>
-            </div>
-            
-            <div class="p-6 border-t border-white/5 bg-black/20">
-                <button onclick="closeModal('modalStorePage')" class="btn-primary w-full !rounded-xl !py-3">Tutup</button>
             </div>
         </div>
     </div>
 
-    <!-- SCRIPT EXTERNAL -->
-    <script type="module" src="app.js"></script>
-    
-    <script>
-        // ========== FUNGSI GLOBAL ==========
-        window.navigate = (page) => {
-            document.querySelectorAll('.page-view').forEach(p => p.classList.add('hidden'));
-            const target = document.getElementById(`page-${page}`);
-            if (target) { target.classList.remove('hidden'); target.classList.add('fade-in'); }
-            document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
-            const navBtn = document.getElementById(`nav-${page}`);
-            if (navBtn) navBtn.classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            if (page === 'profile') refreshProfilePage();
-            if (page === 'orders') drawOrders();
-        };
-        
-        window.openModal = (id) => {
-            const el = document.getElementById(id);
-            if (el) { el.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-        };
-        
-        window.closeModal = (id) => {
-            const el = document.getElementById(id);
-            if (el) { el.style.display = 'none'; document.body.style.overflow = 'auto'; }
-        };
-        
-        document.querySelectorAll('.modal-overlay').forEach(o => o.addEventListener('click', e => {
-            if (e.target === o) { o.style.display = 'none'; document.body.style.overflow = 'auto'; }
-        }));
-        
-        window.expandImg = (src) => {
-            document.getElementById('imgExpanded').src = src;
-            const viewer = document.getElementById('fullImageView');
-            viewer.classList.remove('hidden');
-            viewer.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        };
-        
-        window.closeFullScreen = () => {
-            const viewer = document.getElementById('fullImageView');
-            viewer.classList.add('hidden');
-            viewer.classList.remove('flex');
-            document.body.style.overflow = 'auto';
-        };
-        
-        window.copyLink = () => {
-            if (!window.selProd) return;
-            const url = `${location.origin}${location.pathname}?id=${window.selProd.id}`;
-            navigator.clipboard?.writeText(url).then(() => showToast('Link Disalin! 🔗', 'Tautan produk berhasil disalin'));
-        };
-        
-        window.openEditProfile = () => {
-            if (!window.CU) return showToast('Info', 'Silakan login dulu!', 'info');
-            document.getElementById('editName').value = window.CU.displayName || '';
-            openModal('modalEditProfile');
-        };
-        
-        window.showTransactionHistory = () => navigate('orders');
-        
-        window.logoutUser = () => {
-            if (!confirm('Yakin mau logout?')) return;
-            window.signOut(window.auth).then(() => { navigate('home'); showToast('Logout', 'Sampai jumpa lagi! 👋', 'info'); });
-        };
-        
-        window.toggleAuthForm = () => {
-            document.getElementById('loginForm').classList.toggle('hidden');
-            document.getElementById('regForm').classList.toggle('hidden');
-        };
-        
-        window.goToSellerForm = () => {
-            if (!window.CU) { closeModal('modalBecomeSeller'); openModal('modalAuth'); showToast('Info', 'Login dulu untuk daftar jadi seller!', 'info'); return; }
-            window.get(window.ref(window.db, `seller_applications/${window.CU.uid}`)).then(snap => {
-                if (snap.exists()) {
-                    const d = snap.val();
-                    if (d.status === 'approved') { closeModal('modalBecomeSeller'); showToast('Info', 'Kamu sudah jadi seller aktif! 🎉', 'info'); return; }
-                    if (d.status === 'pending') { closeModal('modalBecomeSeller'); showToast('Info', 'Pendaftaran kamu sedang diproses admin. Sabar ya! ⏳', 'warning'); return; }
-                }
-                const oi = document.getElementById('sf_ownerName');
-                if (oi && window.CU.displayName) oi.value = window.CU.displayName;
-                document.getElementById('sellerStep1').classList.add('hidden');
-                document.getElementById('sellerStep2').classList.remove('hidden');
-            });
-        };
-        
-        window.backToSellerInfo = () => {
-            document.getElementById('sellerStep2').classList.add('hidden');
-            document.getElementById('sellerStep1').classList.remove('hidden');
-        };
-        
-        window.submitSellerApplication = async () => {
-            if (!window.CU) return;
-            const storeName = document.getElementById('sf_storeName').value.trim();
-            const storeDesc = document.getElementById('sf_storeDesc').value.trim();
-            const category = document.getElementById('sf_category').value;
-            const ownerName = document.getElementById('sf_ownerName').value.trim();
-            const whatsapp = document.getElementById('sf_whatsapp').value.trim();
-            const city = document.getElementById('sf_city').value.trim();
-            const experience = document.getElementById('sf_experience')?.value || '';
-            const firstProd = document.getElementById('sf_firstProduct')?.value.trim() || '-';
-            const notes = document.getElementById('sf_notes')?.value.trim() || '-';
-            const agreed = document.getElementById('sf_agree').checked;
-            
-            if (!storeName) return showToast('Error', 'Nama toko wajib diisi!', 'error');
-            if (!storeDesc) return showToast('Error', 'Deskripsi toko wajib diisi!', 'error');
-            if (!category) return showToast('Error', 'Pilih kategori produk!', 'error');
-            if (!ownerName) return showToast('Error', 'Nama lengkap wajib diisi!', 'error');
-            if (!whatsapp || whatsapp.length < 9) return showToast('Error', 'Nomor WA tidak valid!', 'error');
-            if (!city) return showToast('Error', 'Kota/domisili wajib diisi!', 'error');
-            if (!agreed) return showToast('Error', 'Setujui kebijakan seller terlebih dahulu!', 'error');
-            
-            const btn = document.getElementById('btnSubmitSeller');
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
-            
-            try {
-                await window.set(window.ref(window.db, `seller_applications/${window.CU.uid}`), {
-                    storeName, storeDesc, category, ownerName, whatsapp: `+62${whatsapp}`, city,
-                    experience, firstProduct: firstProd, notes, uid: window.CU.uid,
-                    email: window.CU.email, status: 'pending', submittedAt: Date.now(),
-                    reviewedAt: null, rejectedReason: null
-                });
-                await window.set(window.ref(window.db, `users/${window.CU.uid}/sellerStatus`), 'pending');
-                document.getElementById('sellerStep2').classList.add('hidden');
-                document.getElementById('sellerStep3').classList.remove('hidden');
-                refreshProfilePage();
-                showToast('Terkirim! 🎉', 'Pendaftaran seller berhasil dikirim!');
-            } catch (e) {
-                showToast('Gagal', 'Gagal mengirim pendaftaran. Coba lagi!', 'error');
-                btn.disabled = false;
-                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Pendaftaran';
-            }
-        };
-        
-        // Avatar upload preview
-        document.getElementById('avatarUpload')?.addEventListener('change', e => {
-            const file = e.target.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = ev => {
-                const avatar = document.getElementById('profileAvatar');
-                if (avatar) avatar.innerHTML = `<img src="${ev.target.result}" class="w-full h-full object-cover">`;
-            };
-            reader.readAsDataURL(file);
-            showToast('Info', 'Avatar berubah sementara (upload storage tidak aktif)', 'info');
-        });
-        
-        // Escape key close fullscreen
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') closeFullScreen();
-        });
-        
-        // Initial page
-        navigate('home');
-        
-        // Fungsi untuk refresh profile (akan di-override oleh app.js)
-        window.refreshProfilePage = () => {};
-        window.drawOrders = () => {};
-        window.showToast = (title, msg, type = 'success') => {
-            const toast = document.getElementById('toast');
-            if (!toast) return;
-            const colorMap = {
-                success: { border: 'border-l-green-500', bg: 'bg-green-500/20', text: 'text-green-400', fa: 'fa-check-circle' },
-                error: { border: 'border-l-red-500', bg: 'bg-red-500/20', text: 'text-red-400', fa: 'fa-times-circle' },
-                info: { border: 'border-l-blue-500', bg: 'bg-blue-500/20', text: 'text-blue-400', fa: 'fa-info-circle' },
-                warning: { border: 'border-l-yellow-500', bg: 'bg-yellow-500/20', text: 'text-yellow-400', fa: 'fa-exclamation-circle' }
-            };
-            const c = colorMap[type] || colorMap.info;
-            const icon = document.getElementById('toastIcon');
-            const card = toast.querySelector('.glass-card');
-            document.getElementById('toastTitle').textContent = title;
-            document.getElementById('toastMsg').textContent = msg;
-            if (card) card.className = card.className.replace(/border-l-\S+/, c.border);
-            if (icon) {
-                icon.className = `w-10 h-10 ${c.bg} rounded-full flex items-center justify-center ${c.text}`;
-                icon.innerHTML = `<i class="fas ${c.fa}"></i>`;
-            }
-            toast.classList.remove('translate-x-[150%]');
-            if (window.toastTimer) clearTimeout(window.toastTimer);
-            window.toastTimer = setTimeout(() => toast.classList.add('translate-x-[150%]'), 4500);
-        };
-    </script>
+    <!-- FULL IMAGE VIEW -->
+    <div id="fullImageView" class="hidden fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center" onclick="closeFullScreen()">
+        <img id="imgExpanded" src="" class="max-h-[90vh] max-w-[90vw] object-contain rounded-xl">
+        <button class="absolute top-4 right-4 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition"><i class="fas fa-times"></i></button>
+    </div>
+
+<script type="module" src="./app.js"></script>
 </body>
-  </html>
+    </html>
